@@ -59,7 +59,7 @@ $$
 **解析：** 3 bit 图像有 $L=8$ 个灰度级，均衡化映射公式为：
 
 $$
-s_k = \operatorname{round}((L-1)\sum_{j=0}^{k}p(r_j))
+s_k = \mathrm{round}((L-1)\sum_{j=0}^{k}p(r_j))
 $$
 
 即先求累计概率，再乘以最大灰度级 7，最后离散化到整数灰度级。
@@ -117,7 +117,7 @@ $$
 **答案：**
 
 $$
-H_a = 2.875 \text{ bit}
+H_a = 2.875\ \mathrm{bit}
 $$
 
 **解析：** 信息熵公式为：
@@ -155,7 +155,7 @@ $$
 4. 用局部统计量减去常数 $C$ 作为该像素阈值：
 
 $$
-T(x,y)=\operatorname{mean}_{w}(x,y)-C
+T(x,y)=\mathrm{mean}_{w}(x,y)-C
 $$
 
 5. 若 $f(x,y) > T(x,y)$，置为前景；否则置为背景。
@@ -247,7 +247,7 @@ $$
 然后取幅度：
 
 $$
-|F(u,v)|=\sqrt{\operatorname{Re}(F(u,v))^2+\operatorname{Im}(F(u,v))^2}
+|F(u,v)|=\sqrt{\mathrm{Re}(F(u,v))^2+\mathrm{Im}(F(u,v))^2}
 $$
 
 Python 计算方式：
@@ -404,7 +404,7 @@ MSE = 0.7083
 $$
 
 $$
-PSNR \approx 25.02 \text{ dB}
+PSNR \approx 25.02\ \mathrm{dB}
 $$
 
 **解析：** 4 位图像最大灰度值为：
@@ -430,7 +430,7 @@ PSNR：
 $$
 PSNR=10\log_{10}\frac{MAX^2}{MSE}
 =10\log_{10}\frac{225}{0.7083}
-\approx 25.02 \text{ dB}
+\approx 25.02\ \mathrm{dB}
 $$
 
 **考察知识点：** 图像压缩质量评价、MSE、PSNR、位深与最大灰度值。
